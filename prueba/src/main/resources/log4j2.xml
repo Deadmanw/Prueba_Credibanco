@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <!-- Configuración de ruta para el archivo de logs -->
+        <Property name="log-path">logs</Property>
+    </Properties>
+    <Appenders>
+        <!-- Salida a consola -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- Salida a archivo -->
+        <RollingFile name="File" fileName="${log-path}/app.log" filePattern="${log-path}/app-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <!-- Archivos de log se rotan diariamente -->
+                <TimeBasedTriggeringPolicy />
+                <!-- Se mantienen hasta 10 archivos de log comprimidos -->
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!-- Loggers específicos para paquetes o clases -->
+        <Logger name="com.tuempresa" level="info" additivity="false">
+            <AppenderRef ref="File" />
+        </Logger>
+
+        <!-- Nivel de registro para la raíz del logger -->
+        <Root level="error">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
