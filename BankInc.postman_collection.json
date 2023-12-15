@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "05953dc3-596a-4390-bd1b-581caeebc6ca",
+		"name": "BankInc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10893112"
+	},
+	"item": [
+		{
+			"name": "GenerateNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/card/3/number",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"card",
+						"3",
+						"number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateNumber AWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.191.84.143/card/1/number",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"card",
+						"1",
+						"number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de tarjetas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/card/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"card",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de tarjetas AWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.191.84.143/card/list",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"card",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activarTarjeta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\":\"0000030363311636\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/card/Activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"card",
+						"Activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activarTarjeta AWS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\":\"0000010074197478\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.191.84.143/card/Activate",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"card",
+						"Activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bloquearTarjeta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/card/0000030363311636",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"card",
+						"0000030363311636"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bloquearTarjeta AWS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://18.191.84.143/card/0000010074197478",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"card",
+						"0000010074197478"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recargarSaldo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\": \"1234567890123456\",\r\n    \"balance\": \"50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/card/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"card",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recargarSaldo AWS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\": \"0000010074197478\",\r\n    \"balance\": \"50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.191.84.143/card/balance",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"card",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarSaldo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/card/balance/1234567890123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"card",
+						"balance",
+						"1234567890123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarSaldo AWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.191.84.143/card/balance/1234567890123456",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"card",
+						"balance",
+						"1234567890123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "realizarCompra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\": \"1234567890123456\",\r\n    \"price\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/transaction/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"transaction",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "realizarCompra AWS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\": \"1234567890123456\",\r\n    \"price\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.191.84.143/transaction/purchase",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"transaction",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarTransaccion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/transaction/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"transaction",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarTransaccion AWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.191.84.143/transaction/15",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"transaction",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "anularTransaccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionId\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/transaction/anulation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"transaction",
+						"anulation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "anularTransaccion AWS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionId\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.191.84.143/transaction/anulation",
+					"protocol": "http",
+					"host": [
+						"18",
+						"191",
+						"84",
+						"143"
+					],
+					"path": [
+						"transaction",
+						"anulation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
