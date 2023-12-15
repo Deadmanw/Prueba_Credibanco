@@ -32,7 +32,7 @@ El Bank Inc Card System representa una solución integral para instituciones fin
 ## Diagrama Base de datos
 Image:
 
-![](https://github.com/Deadmanw/Prueba_Credibanco/BankIncER.png)
+![](https://github.com/Deadmanw/Prueba_Credibanco/blob/main/BankIncER.png)
 
 > Diagrama relacional.
 
@@ -44,7 +44,7 @@ http://18.191.84.143/swagger-ui/index.html
 ## Colecion Postman
 Encontraremos el listado de peticiones tanto en local como al servicio desplegado en AWS
 
-https://github.com/Deadmanw/Prueba_Credibanco/BankInc.postman_collection.json
+https://github.com/Deadmanw/Prueba_Credibanco/blob/main/BankInc.postman_collection.json
 
 ## Despliegue local
 
